@@ -13,7 +13,7 @@ $hook = array(
 if(!function_exists('DomainRenewalNotice')){
     function DomainRenewalNotice($args){
 
-        $api = new smsq();
+        $api = new epointsms();
         $template = $api->getTemplateDetails(__FUNCTION__);
         if($template['active'] == 0){
             return null;

@@ -13,7 +13,7 @@ $hook = array(
 
 if(!function_exists('TicketAdminReply')){
     function TicketAdminReply($args){
-        $api = new smsq();
+        $api = new epointsms();
         $template = $api->getTemplateDetails(__FUNCTION__);
 
         if($template['active'] == 0){

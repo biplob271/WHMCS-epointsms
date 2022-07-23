@@ -15,7 +15,7 @@ if(!function_exists('AfterModuleChangePackage')){
         $type = $args['params']['producttype'];
 
         if($type == "hostingaccount"){
-            $api = new smsq();
+            $api = new epointsms();
             $template = $api->getTemplateDetails(__FUNCTION__);
             if($template['active'] == 0){
                 return null;

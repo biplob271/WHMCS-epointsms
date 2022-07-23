@@ -152,7 +152,7 @@ class epointsmsAPI {
     public function SendMessage($Mobile,$TEXT,$json=FALSE){
        // $TEXT=urlencode($TEXT);
         
-        $sms = $this->sender_id . ":: \n" . $TEXT;
+        $sms = $this->sender_id . "; \n" . $TEXT;
 
 $toNumber = $Mobile;
 

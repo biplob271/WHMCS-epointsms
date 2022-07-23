@@ -12,7 +12,7 @@ $hook = array(
 );
 if(!function_exists('ClientAdd')){
     function ClientAdd($args){
-        $api = new smsq();
+        $api = new epointsms();
         $template = $api->getTemplateDetails(__FUNCTION__);
         if($template['active'] == 0){
             return null;

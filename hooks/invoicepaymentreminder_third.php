@@ -15,7 +15,7 @@ if(!function_exists('InvoicePaymentReminder_thirdoverdue')){
     function InvoicePaymentReminder_thirdoverdue($args){
 
         if($args['type'] == "thirdoverdue"){
-            $api = new smsq();
+            $api = new epointsms();
             $template = $api->getTemplateDetails(__FUNCTION__);
             if($template['active'] == 0){
                 return null;

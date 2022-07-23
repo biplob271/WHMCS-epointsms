@@ -15,7 +15,7 @@ if(!function_exists('InvoicePaymentReminder_Firstoverdue')){
     function InvoicePaymentReminder_Firstoverdue($args){
 
         if($args['type'] == "firstoverdue"){
-            $api = new smsq();
+            $api = new epointsms();
             $template = $api->getTemplateDetails(__FUNCTION__);
             if($template['active'] == 0){
                 return null;
